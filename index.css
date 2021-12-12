@@ -2,11 +2,35 @@
  * Use of this source code is governed by a BSD-style license that can be
  * found in the LICENSE file. */
 
-html, body {
+/* Box1 */
+@font-face {
+  font-family: 'pixelfont';
+  src: url('font/slkscrb-webfont.woff2') format('woff2'), url('font/slkscrb-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.box1 {
+  height: 100px;
+  width: 400px;
+  background-color: rgb(255, 204, 128, 0.5);
+  z-index: 100;
+  display: block;
+  text-align: center;
+}
+
+.box1 h3 {
+  padding: none;
+  margin: none;
+}
+
+html,
+body {
   padding: 0;
   margin: 0;
   width: 100%;
   height: 100%;
+  background-color: rgb(29, 30, 34);
 }
 
 .icon {
@@ -16,14 +40,13 @@ html, body {
 }
 
 .icon-offline {
-  content: -webkit-image-set( url(assets/default_100_percent/100-error-offline.png) 1x, url(assets/default_200_percent/200-error-offline.png) 2x);
+  content: -webkit-image-set(url(assets/default_100_percent/100-error-offline.png) 1x, url(assets/default_200_percent/200-error-offline.png) 2x);
   position: relative;
 }
 
 .hidden {
   display: none;
 }
-
 
 /* Offline page */
 
@@ -44,6 +67,9 @@ html, body {
   position: absolute;
   top: 35px;
   width: 44px;
+  border: 4px solid;
+  box-shadow: 0px 4px 0 #3a50d9, 0px 8px 0 #0a0e27;
+  background-image: url(img/background.png);
 }
 
 .offline .runner-canvas {
@@ -57,7 +83,7 @@ html, body {
 }
 
 .offline .controller {
-  background: rgba(247, 247, 247, .1);
+  background: rgba(247, 247, 247, 0.1);
   height: 100vh;
   left: 0;
   position: absolute;
@@ -70,8 +96,16 @@ html, body {
   display: none;
 }
 
+.interstitial-wrapper .JUDUL {
+  text-align: center;
+  font-family: 'pixelfont', fantasy, sans-serif;
+  color: white;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+}
+
 @media (max-width: 420px) {
-  .suggested-left > #control-buttons, .suggested-right > #control-buttons {
+  .suggested-left > #control-buttons,
+  .suggested-right > #control-buttons {
     float: none;
   }
   .snackbar {
@@ -104,7 +138,7 @@ html, body {
   }
 }
 
-@media (min-width: 420px) and (max-width: 736px) and (min-height: 240px) and (max-height: 420px) and (orientation:landscape) {
+@media (min-width: 420px) and (max-width: 736px) and (min-height: 240px) and (max-height: 420px) and (orientation: landscape) {
   .interstitial-wrapper {
     margin-bottom: 100px;
   }
