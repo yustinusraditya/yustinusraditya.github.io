@@ -120,6 +120,12 @@ body {
   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #0066ff, 0 0 70px #0066ff, 0 0 80px #0066ff, 0 0 100px #0066ff;
 }
 
+.audio {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 @media (max-width: 420px) {
   .suggested-left > #control-buttons,
   .suggested-right > #control-buttons {
